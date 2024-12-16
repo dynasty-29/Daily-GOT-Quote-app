@@ -1,1 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Daily Anime Quotes</title>
+</head>
+
+<body>
+    <header>
+        <h1>Daily Anime Quotes</h1>
+    </header>
+    <main>
+        <section id="quote-container">
+            <div id="quote-box">
+                <!-- Quote will be dynamically added here -->
+            </div>
+        </section>
+        <button id="random-quote-button">Get Random Quote</button>
+
+        <section id="favorites-section">
+            <h2>Your Favorite Quotes</h2>
+            <div id="favorite-quotes"></div>
+        </section>
+
+        <!-- Search quote section -->
+        <section id="search-section">
+            <h2>Search Quotes</h2>
+            <input type="text" id="search-input" placeholder="Search by character, anime, or text">
+            <div id="search-results"></div>
+        </section>
+        <!-- Form section -->
+        <section id="suggest-quote-section">
+            <h2>Suggest a Quote</h2>
+            <form id="suggest-quote-form">
+                <label for="quote-text">Quote:</label>
+                <textarea id="quote-text" required placeholder="Enter the quote here"></textarea>
+                <br>
+                <label for="character-name">Character:</label>
+                <input type="text" id="character-name" required placeholder="Enter the character's name">
+                <br>
+                <label for="anime-name">Anime:</label>
+                <input type="text" id="anime-name" required placeholder="Enter the anime name">
+                <br>
+                <button type="submit">Submit Quote</button>
+            </form>
+        </section>
+    </main>
+    <script src="./script.js"></script>
+</body>
+
+</html>

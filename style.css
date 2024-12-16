@@ -1,1 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Lobster&family=Nabla&display=swap');
+/* -------------------------Body section -------------------------*/
+body {
+    font-family: "Lobster", sans-serif;
+    background-color: #690505;
+    color: #333;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    background-image: url('https://i.pinimg.com/736x/0a/c6/6f/0ac66f6cf7a4f74f9e435037dea7492e.jpg');
+    background-size: cover; 
+    background-position: center center; 
+    background-attachment: fixed; 
+    background-repeat: no-repeat;
+}
 
+header {
+    background-color: #0077cc;
+    color: rgb(141, 5, 231);
+    padding: 20px 0;
+}
+
+h1 {
+    margin: 0;
+}
+/* -------------------------button to install later with JS once approved-------------------------*/
+button {
+    padding: 30px 40px;
+    background-color: #0077cc;
+    color: rgb(11, 241, 99);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 40px;
+}
+
+button:hover {
+    background-color: #8f9900;
+}
+/*------------------------- Quote section------------------------- */
+#quote-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+
+#quote-container blockquote {
+    font-size: 1.5em;
+    font-style: italic;
+    margin: 20px auto;
+    border-left: 5px solid #0077cc;
+    padding-left: 10px;
+}
+
+#quote-box {
+    background-color: #c9bcbc;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 90%;
+    transition: background-color 0.5s ease;
+}
+
+#quote-box blockquote {
+    font-size: 1.5em;
+    font-style: italic;
+    margin: 0;
+    text-align: center;
+}
+
+#quote-box footer {
+    margin-top: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: right;
+    color: #555;
+}
+
+#favorites-section,
+#search-section {
+    margin: 20px 0;
+}
+/* -------------------------form section -------------------------*/
+#suggest-quote-section {
+    margin: 20px 0;
+}
+
+#suggest-quote-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#suggest-quote-form label {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+#suggest-quote-form input,
+#suggest-quote-form textarea {
+    padding: 10px;
+    width: 80%;
+    max-width: 500px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#suggest-quote-form button {
+    padding: 10px 20px;
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#suggest-quote-form button:hover {
+    background-color: #005f99;
+}
