@@ -2,12 +2,12 @@
 /* -------------------------Body section -------------------------*/
 body {
     font-family: "Lobster", sans-serif;
-    background-color: #690505;
-    color: #333;
+    background-color: #2f0569ab;
+    color: #43ee0a;
     text-align: center;
     padding: 0;
     margin: 0;
-    background-image: url('https://i.pinimg.com/736x/0a/c6/6f/0ac66f6cf7a4f74f9e435037dea7492e.jpg');
+    background-image: url('./img/img\ \(4\).jpg');
     background-size: cover; 
     background-position: center center; 
     background-attachment: fixed; 
@@ -15,8 +15,8 @@ body {
 }
 
 header {
-    background-color: #0077cc;
-    color: rgb(141, 5, 231);
+    background-color: #434648;
+    color: rgb(9, 47, 237);
     padding: 20px 0;
 }
 
@@ -47,35 +47,35 @@ button:hover {
 
 #quote-container blockquote {
     font-size: 1.5em;
-    font-style: italic;
+    font-style: bold;
     margin: 20px auto;
-    border-left: 5px solid #0077cc;
+    border-left: 5px solid #06e8f4;
     padding-left: 10px;
 }
 
 #quote-box {
-    background-color: #c9bcbc;
+    background-color: #f7f3f3;
     border-radius: 10px;
     padding: 20px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 10px rgb(5, 45, 245);
     max-width: 600px;
     width: 90%;
     transition: background-color 0.5s ease;
 }
 
 #quote-box blockquote {
-    font-size: 1.5em;
-    font-style: italic;
+    font-size: 30px;
+    font-style: bold;
     margin: 0;
     text-align: center;
 }
 
 #quote-box footer {
     margin-top: 10px;
-    font-size: 1em;
+    font-size: 20px;
     font-weight: bold;
     text-align: right;
-    color: #555;
+    color: #ef05d0;
 }
 
 #favorites-section,
@@ -94,7 +94,8 @@ button:hover {
 }
 
 #suggest-quote-form label {
-    font-size: 1.1em;
+    font-size: 20px;
+    font-style: bold;
     margin: 10px 0;
 }
 
@@ -105,18 +106,18 @@ button:hover {
     max-width: 500px;
     margin-bottom: 15px;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #08f004;
 }
 
 #suggest-quote-form button {
     padding: 10px 20px;
-    background-color: #0077cc;
-    color: white;
+    background-color: #10d0f6;
+    color: rgb(233, 26, 202);
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
 #suggest-quote-form button:hover {
-    background-color: #005f99;
+    background-color: #09f329;
 }
