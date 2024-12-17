@@ -61,9 +61,9 @@ main {
     background-color: white;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
     margin-bottom: 20px;
-    animation: heartbeat 1.5s ease-in-out infinite; /* Apply heartbeat animation */
+    animation: heartbeat 0.005s ease-in-out infinite; 
     transition: all 0.3s ease-in-out;
 }
 
