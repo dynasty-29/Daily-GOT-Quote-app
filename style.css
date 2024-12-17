@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Lobster&family=Nabla&display=swap');
+
 /* -------------------------Body section -------------------------*/
 body {
     font-family: "Lobster", sans-serif;
@@ -7,7 +8,7 @@ body {
     text-align: center;
     padding: 0;
     margin: 0;
-    background-image: url('./img/img\ \(4\).jpg');
+    background-image: url('./img/img\ \(2\).jpg');
     background-size: cover; 
     background-position: center center; 
     background-attachment: fixed; 
@@ -23,31 +24,59 @@ header {
 h1 {
     margin: 0;
 }
-/* -------------------------button to install later with JS once approved-------------------------*/
-button {
-    padding: 30px 40px;
-    background-color: #0077cc;
-    color: rgb(11, 241, 99);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 40px;
+
+main {
+    padding: 20px;
+    max-width: 900px;
+    margin: 30px auto;
 }
 
-button:hover {
-    background-color: #8f9900;
+/* Heartbeat Animation */
+@keyframes heartbeat {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(.05);
+    }
+    50% {
+        transform: scale(1);
+    }
+    75% {
+        transform: scale(.05);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
-/*------------------------- Quote section------------------------- */
+
+/* Container Styles with Heartbeat Effect and Shadow */
+#quote-container,
+#favorites-section,
+#search-section,
+#suggest-quote-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow */
+    margin-bottom: 20px;
+    animation: heartbeat 1.5s ease-in-out infinite; /* Apply heartbeat animation */
+    transition: all 0.3s ease-in-out;
+}
+
+/* -------------------------Quote section------------------------- */
 #quote-container {
     display: flex;
     justify-content: center;
     margin: 20px;
 }
 
-
 #quote-container blockquote {
     font-size: 1.5em;
-    font-style: bold;
+    font-weight: bold;  /* Changed from "font-style" to "font-weight" */
     margin: 20px auto;
     border-left: 5px solid #06e8f4;
     padding-left: 10px;
@@ -57,7 +86,7 @@ button:hover {
     background-color: #f7f3f3;
     border-radius: 10px;
     padding: 20px;
-    box-shadow: 0px 4px 10px rgb(5, 45, 245);
+    box-shadow: 0px 4px 10px rgb(5, 45, 245);  /* Added shadow for quote box */
     max-width: 600px;
     width: 90%;
     transition: background-color 0.5s ease;
@@ -65,7 +94,7 @@ button:hover {
 
 #quote-box blockquote {
     font-size: 30px;
-    font-style: bold;
+    font-weight: bold;  /* Changed from "font-style" to "font-weight" */
     margin: 0;
     text-align: center;
 }
@@ -77,12 +106,15 @@ button:hover {
     text-align: right;
     color: #ef05d0;
 }
-
+#favorite-quotes{
+    text-align: left;
+}
 #favorites-section,
 #search-section {
     margin: 20px 0;
 }
-/* -------------------------form section -------------------------*/
+
+/* -------------------------Form Section -------------------------*/
 #suggest-quote-section {
     margin: 20px 0;
 }
@@ -95,7 +127,7 @@ button:hover {
 
 #suggest-quote-form label {
     font-size: 20px;
-    font-style: bold;
+    font-weight: bold;
     margin: 10px 0;
 }
 
@@ -106,7 +138,7 @@ button:hover {
     max-width: 500px;
     margin-bottom: 15px;
     border-radius: 5px;
-    border: 1px solid #08f004;
+    border: 1px solid #043ff0;
 }
 
 #suggest-quote-form button {
