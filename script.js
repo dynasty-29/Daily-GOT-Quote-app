@@ -1,3 +1,5 @@
+//trying to make my code modular , with direct comments
+
 document.addEventListener('DOMContentLoaded', () => {
 
     // Variables to hold quotes and favorites
