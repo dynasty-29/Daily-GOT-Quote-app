@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function addToFavorites(quoteText, character) {
         const newFavorite = { text: quoteText, character };
         favorites.push(newFavorite);
-        localStorage.setItem("favorites", JSON.stringify(favorites));
+        localStorage.setItem("favorites", JSON.stringify(new Set(favorites)));
         renderFavorites();
     }
 
