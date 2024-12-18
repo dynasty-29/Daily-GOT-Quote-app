@@ -1,9 +1,11 @@
 //trying to make my code modular , with direct comments
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', (e) => {
+
+    e.preventDefault();
 
     // Variables to hold quotes and favorites
-    let favorites = [];
+    let favorites = new Set();
     const apiBase = "https://api.gameofthronesquotes.xyz/v1";
     // const xterBase = "https://api.gameofthronesquotes.xyz/v1/author"
 
@@ -45,8 +47,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add a quote to favorites
     function addToFavorites(quoteText, character) {
         const newFavorite = { text: quoteText, character };
-        favorites.push(newFavorite);
-        localStorage.setItem("favorites", JSON.stringify(new Set(favorites)));
+        favorites.add(newFavorite);
+        localStorage.setItem("favorites", JSON.stringify(favorites));
         renderFavorites();
     }
 
@@ -68,8 +70,10 @@ document.addEventListener('DOMContentLoaded', () => {
     
         // Create an ordered list for the favorite quotes
         const ol = document.createElement('ol');
+
+        let favs = new Array.from(favorites);
         
-        favorites.forEach((quote, index) => {
+        favs.forEach((quote, index) => {
             const li = document.createElement('li');
             li.classList.add("favorite-quote");
             
@@ -88,8 +92,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Remove a favorite quote
     function removeFavorite(index) {
-        favorites.splice(index, 1);
-        localStorage.setItem("favorites", JSON.stringify(favorites));
+        let favs = new Array.from(favorites);
+        favs.splice(index, 1);
+        localStorage.setItem("favorites", JSON.stringify(favs));
         renderFavorites();
     }
 
