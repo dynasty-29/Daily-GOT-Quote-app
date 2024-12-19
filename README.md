@@ -1,7 +1,7 @@
-# Daily-anime-Quote-app
+# Daily-GOT-Quote-app
 
 
-The Daily Anime Quote App is a Single Page Application I designed to display daily anime quotes fetched from an API or a local JSON file. Users can explore quotes, save their favorites, and search for specific quotes based on the character, anime, or text. The app is styled for a polished and responsive user experience.
+The Daily GOT Quote App is a Single Page Application I designed to display daily GOT quotes fetched from an API or a local JSON file. Users can explore quotes, save their favorites, and search for specific quotes based on the character, anime, or text. The app is styled for a polished and responsive user experience.
 
 Here is the live link to the project:[https://daily-got-quote-aqd1kuuqv-dynasty-29s-projects.vercel.app/]
 
