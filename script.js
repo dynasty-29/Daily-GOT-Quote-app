@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
     e.preventDefault();
 
     // Variables to hold quotes and favorites
-    let favorites = new Set();
+    let favorites = [];
     const apiBase = "https://api.gameofthronesquotes.xyz/v1";
     // const xterBase = "https://api.gameofthronesquotes.xyz/v1/author"
 
@@ -46,24 +46,15 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
     // Add a quote to favorites
     function addToFavorites(quoteText, character) {
-        const newFavorite = { text: quoteText, character };
-        favorites.add(newFavorite);
+        // const newFavorite = { text: quoteText, character };
+        const value_ = `${quoteText}~${character}`;
+
+        // favorites.push(newFavorite);
+        if (!favorites.includes(value_))
+            favorites.push(value_);
         localStorage.setItem("favorites", JSON.stringify(favorites));
         renderFavorites();
     }
-
-    // // Render favorite quotes from favorites
-    // function renderFavorites() {
-    //     favoriteSection.innerHTML = ""; // Clear previous
-    //     favorites.forEach((quote, index) => {
-    //         const quoteDiv = document.createElement("div");
-    //         quoteDiv.classList.add("favorite-quote");
-    //         quoteDiv.innerHTML =
-    //             `<p>"${quote.text}" - <strong>${quote.character}</strong></p>
-    //         <button class="remove-favorite" data-index="${index}">Remove</button>`;
-    //         favoriteSection.appendChild(quoteDiv);
-    //     });
-    // }
 
     function renderFavorites() {
         favoriteSection.innerHTML = ""; // Clear previous
@@ -71,14 +62,13 @@ document.addEventListener('DOMContentLoaded', (e) => {
         // Create an ordered list for the favorite quotes
         const ol = document.createElement('ol');
 
-        let favs = new Array.from(favorites);
-        
-        favs.forEach((quote, index) => {
+        favorites.forEach((quote, index) => {
             const li = document.createElement('li');
             li.classList.add("favorite-quote");
+            const quoteValue = quote.split('~');
             
             li.innerHTML = `
-                "<em>${quote.text}</em>" - <strong>${quote.character}</strong>
+                "<em>${quoteValue[0]}</em>" - <strong>${quoteValue[1]}</strong>
                 <button class="remove-favorite" data-index="${index}">Remove</button>
             `;
             
@@ -92,9 +82,8 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
     // Remove a favorite quote
     function removeFavorite(index) {
-        let favs = new Array.from(favorites);
-        favs.splice(index, 1);
-        localStorage.setItem("favorites", JSON.stringify(favs));
+        favorites.splice(index, 1);
+        localStorage.setItem("favorites", JSON.stringify(favorites));
         renderFavorites();
     }
 
